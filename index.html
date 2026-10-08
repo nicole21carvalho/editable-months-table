@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tabela com os 12 meses do ano, editável direto no navegador.">
+  <title>Tabela de Meses Editável</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="cabecalho">
+      <div>
+        <h1>📅 Tabela de Meses</h1>
+        <p class="subtitulo">Dê dois cliques numa célula (ou selecione e aperte Enter) para editar. Tudo fica salvo no navegador.</p>
+      </div>
+      <div class="acoes">
+        <button type="button" class="botao botao--primario" id="adicionar">＋ Adicionar linha</button>
+        <button type="button" class="botao" id="limpar">Limpar tabela</button>
+      </div>
+    </header>
+
+    <div class="tabela-rolagem" tabindex="0" aria-label="Tabela de meses, role para os lados no celular">
+      <table id="tabela">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Jan</th><th scope="col">Fev</th><th scope="col">Mar</th>
+            <th scope="col">Abr</th><th scope="col">Mai</th><th scope="col">Jun</th>
+            <th scope="col">Jul</th><th scope="col">Ago</th><th scope="col">Set</th>
+            <th scope="col">Out</th><th scope="col">Nov</th><th scope="col">Dez</th>
+            <th scope="col"><span class="sr-only">Ações</span></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <p class="vazio" id="vazio" hidden>A tabela está vazia. Clique em <strong>Adicionar linha</strong> para começar.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
